@@ -10,7 +10,14 @@ import android.net.wifi.WifiManager
 class ConnectToWifiReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context?, intent: Intent?) {
+        println("***************************")
+        println("***************************")
+        println("onReceive")
+        println("***************************")
+        println("***************************")
+
         context?.let {
+            println("context is not null")
             val wifiManager =
                 context.applicationContext.getSystemService(Activity.WIFI_SERVICE) as WifiManager
             wifiManager.isWifiEnabled = true
